@@ -1,12 +1,22 @@
 {
   "name": "td-utils",
-  "version": "0.1.0",
-  "description": "天达智能js工具库",
+  "version": "0.1.5",
+  "description": "td-utils javascript utils",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "panzhenyao",
-  "license": "ISC"
+  "author": {
+    "name": "panzhenyao",
+    "email": "panzhenyao@outlook.com"
+  },
+  "bugs": {
+    "url": "https://github.com/panzhenyao/td-utils/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panzhenyao/td-utils"
+  },
+  "dependencies": {}
 }
