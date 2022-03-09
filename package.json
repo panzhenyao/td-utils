@@ -1,22 +1,30 @@
 {
-  "name": "td-utils",
-  "version": "0.1.5",
-  "description": "td-utils javascript utils",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": {
-    "name": "panzhenyao",
-    "email": "panzhenyao@outlook.com"
-  },
-  "bugs": {
-    "url": "https://github.com/panzhenyao/td-utils/issues"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/panzhenyao/td-utils"
-  },
-  "dependencies": {}
+	"name": "td-utils",
+	"version": "0.1.8",
+	"description": "td-utils javascript utils",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": {
+		"name": "panzhenyao",
+		"email": "panzhenyao@outlook.com"
+	},
+	"bugs": {
+		"url": "https://github.com/panzhenyao/td-utils/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/panzhenyao/td-utils"
+	},
+	"devDependencies": {
+		"jest": "^27.5.1"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"js"
+		],
+		"coverageDirectory": "<rootDir>/test/"
+	}
 }

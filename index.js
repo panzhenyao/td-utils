@@ -13,7 +13,7 @@ var debounce = require('./src/utils/shared/debounce')
 var throttle = require('./src/utils/shared/throttle')
 var deepClone = require('./src/utils/shared/deepClone')
 var uniqueArray = require('./src/utils/shared/uniqueArray')
-
+var randomCharCode = require('./src/utils/shared/randomCharCode')
 // 浏览器相关方法
 var clearUrlParam = require('./src/utils/web/clearUrlParam')
 var downloadFile = require('./src/utils/web/downloadFile')
@@ -35,6 +35,7 @@ module.exports = {
     throttle: throttle,
     deepClone: deepClone,
     uniqueArray: uniqueArray,
+    randomCharCode: randomCharCode,
     // 浏览器相关方法
     clearUrlParam: clearUrlParam,
     downloadFile: downloadFile,

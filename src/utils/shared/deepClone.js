@@ -1,3 +1,5 @@
+var isObject = require('../base/isObject')
+var isUndef = require('../base/isUndef')
 /**
  * This is just a simple version of deep copy
  * Has a lot of edge cases bug
@@ -6,8 +8,8 @@
  * @returns {Object}
  */
 function deepClone(source) {
-	if (!source && typeof source !== 'object') {
-		throw new Error('error arguments', 'deepClone')
+	if (!isUndef(source) && !isObject(source)) {
+		throw new Error('error arguments', 'deepClone param is not object')
 	}
 	var targetObj = source.constructor === Array ? [] : {}
 	Object.keys(source).forEach((keys) => {

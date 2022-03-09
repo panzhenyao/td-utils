@@ -224,8 +224,8 @@ deepClone 简单的深度复制版本
 
 ```javascript
 function deepClone(source) {
-	if (!source && typeof source !== 'object') {
-		throw new Error('error: arguments', 'method deepClone not supported')
+	if (!isUndef(source) && !isObject(source)) {
+		throw new Error('error arguments', 'deepClone param is not object')
 	}
 	var targetObj = source.constructor === Array ? [] : {}
 	Object.keys(source).forEach((keys) => {
@@ -401,5 +401,32 @@ function parseTime(time, cFormat) {
 		return value.toString().padStart(2, '0')
 	})
 	return time_str
+}
+```
+
+### utils.randomCharCode()  
+  
+randomCharCode 随机字母字符  
+@return String  
+
+-   `size`: Number 随机字符串长度
+
+```javascript
+function randomCharCode(size) {
+	if (typeof size === 'number' || isUndef(size)) {
+		var _defaultSize = 30
+		var _maxSize = size
+		var num = _maxSize || _defaultSize
+		var str = ''
+
+		// 可以修改长度
+		for (var i = 0; i < num; i++) {
+			var base = Math.random() < 0.5 ? 65 : 97
+			str += String.fromCharCode(base + Math.floor(Math.random() * 26))
+		}
+		return str
+	} else {
+		return ''
+	}
 }
 ```
